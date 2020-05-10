@@ -1,15 +1,5 @@
-import React from 'react';
-import ReactDOM, { render } from 'react-dom';
-import Main from './pages/main/Main';
+import React from "react";
+import ReactDOM, { render } from "react-dom";
+import App from "./App";
 
-class App extends React.Component {
-    render() {
-        return(
-            <div>
-                <Main />
-            </div>
-        );
-    }c
-};
-
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -1,0 +1,135 @@
+.body {
+  background: #ececec;
+}
+
+.startup-container {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "body body body"
+    "footer footer footer";
+}
+
+.startup-header {
+  grid-area: header;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.startup-header p {
+  text-shadow: 3px 4px #f2a365;
+  font-family: "Mitr", sans-serif;
+  color: #30475e;
+  font-size: 70px;
+  letter-spacing: 5px;
+  margin: 10px;
+  padding-left: 40px;
+  font-weight: 800;
+}
+
+.startup-body {
+  flex: 1;
+  height: 100%;
+  margin: 20px;
+  padding: 30px;
+  grid-area: body;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "body lbtn"
+    "body sbtn";
+}
+
+.description {
+  grid-area: body;
+  display: flex;
+  justify-content: left;
+}
+
+.description p {
+  font-family: "Mitr", sans-serif;
+  color: #30475e;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin: 10px 10px 10px 50px;
+}
+
+.login-button {
+  grid-area: lbtn;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.signup-button {
+  grid-area: sbtn;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.button {
+  width: 250px;
+  background: #f2a365;
+  border: solid 1px #30475e;
+  font-family: "Mitr", sans-serif;
+  box-shadow: 3px 3px #30475e;
+  color: #30475e;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 15px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in 0.2s;
+}
+
+.button:hover {
+  color: #222831;
+  border: solid 1px #f2a365;
+  background: #ecece2;
+}
+
+.startup-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.startup-footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.startup-footer p {
+  margin: 0;
+}
+
+@media (max-width: 756px) {
+  .startup-header {
+    padding-left: 0px;
+    align-items: baseline;
+  }
+  .startup-body {
+    padding: 0%;
+    grid-column: 5fr 1fr 1fr;
+    grid-template-areas:
+      "body body"
+      "lbtn ."
+      "sbtn .";
+  }
+  .button {
+    margin-left: 50px;
+  }
+}
