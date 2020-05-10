@@ -19,6 +19,9 @@
   display: flex;
   justify-content: left;
   align-items: flex-end;
+  border-bottom: 1px dashed grey;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .startup-header p {
@@ -50,6 +53,7 @@
   grid-area: body;
   display: flex;
   justify-content: left;
+  align-items: flex-start;
 }
 
 .description p {
@@ -64,7 +68,7 @@
   grid-area: lbtn;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .signup-button {
@@ -116,7 +120,7 @@
   margin: 0;
 }
 
-@media (max-width: 756px) {
+@media (max-width: 900px) {
   .startup-header {
     padding-left: 0px;
     align-items: baseline;
@@ -128,6 +132,10 @@
       "body body"
       "lbtn ."
       "sbtn .";
+  }
+  .description p{
+      font-size: 12px;
+      margin: 0px;
   }
   .button {
     margin-left: 50px;
