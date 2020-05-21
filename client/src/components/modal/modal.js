@@ -1,18 +1,30 @@
 import React from "react";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
-import "./modal.css";
+
+const modalStyles = {
+  modal: {
+    background: "lightblue",
+    margin: "auto auto",
+    width: "350px",
+    "max-width": "400px",
+    border: "2px solid white",
+  },
+};
 
 export default function ModalPopup({ open, setOpen }) {
   return (
     <div>
-      <Modal open={open} onClose={() => setOpen(false)} className="container">
-        <h2>Login</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          pulvinar risus non risus hendrerit venenatis. Pellentesque sit amet
-          hendrerit risus, sed porttitor quam.
-        </p>
+      <Modal open={open} onClose={() => setOpen(false)} styles={modalStyles}>
+        <h2 className="title">Login</h2>
+        <div className="Inputs">
+          <p>Email:</p>
+          <input placeholder="Enter Email..."></input>
+          <p>Password:</p>
+          <input placeholder="Enter Password..."></input>
+          <button>Confirm</button>
+        </div>
+        <button>Login with Google</button>
       </Modal>
     </div>
   );

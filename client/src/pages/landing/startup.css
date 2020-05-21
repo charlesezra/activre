@@ -108,8 +108,8 @@ body {
 
 .button:hover {
   color: #222831;
-  border: solid 1px #f2a365;
-  transform: translateY(-2px);
+  border: none;
+  transform: translateY(-1px);
   background: #ecece2;
 }
 
@@ -126,6 +126,7 @@ body {
   font-size: 14px;
   bottom: 0;
   position: fixed;
+  color: #30475e;
 }
 
 @media (max-width: 1064px) {

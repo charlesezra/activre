@@ -3,12 +3,9 @@ import "./startup.css";
 import ModalPopup from "../../components/modal/modal";
 
 export default function Landing() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div className="startup-container">
-      <div className="modal-container">
-        <ModalPopup setOpen={setOpen} open={open} />
-      </div>
       <div className="startup-header">
         <p>activRE</p>
       </div>
@@ -36,8 +33,12 @@ export default function Landing() {
 
       <div className="startup-footer">
         <p>
-          <b>created by:</b> charlesc18 on 05/10/2020
+          <b>© 2020 activRE, All Rights Reserved</b>
         </p>
+      </div>
+
+      <div className="modal-container">
+        <ModalPopup setOpen={setOpen} open={open} />
       </div>
     </div>
   );
