@@ -1,5 +1,4 @@
 body {
-  /* background: linear-gradient(#ececec, #f2a365); */
   background: linear-gradient(-45deg, #ececec, #fcdcc3);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
@@ -8,6 +7,7 @@ body {
 .startup-container {
   flex: 1;
   height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 2fr 0.5fr;
@@ -41,7 +41,6 @@ body {
 .startup-body {
   flex: 1;
   height: 100%;
-  margin: 20px;
   padding: 30px;
   grid-area: body;
   display: grid;
@@ -53,6 +52,8 @@ body {
 }
 
 .description {
+  padding: 20px;
+  border-radius: 50px;
   grid-area: body;
   display: flex;
   justify-content: left;
@@ -96,11 +97,19 @@ body {
   justify-content: center;
   align-items: center;
   transition: ease-in 0.2s;
+  border: none;
+  outline: none;
+}
+
+.button:active {
+  transform: translateY(3px);
+  box-shadow: 0px 2px 0px 0px rgba(48, 71, 94, 0.3);
 }
 
 .button:hover {
   color: #222831;
   border: solid 1px #f2a365;
+  transform: translateY(-2px);
   background: #ecece2;
 }
 
@@ -115,42 +124,44 @@ body {
 .startup-footer p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  position: absolute;
-  bottom: 5px;
+  bottom: 0;
+  position: fixed;
 }
 
-.startup-footer p {
-  margin: 0;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1064px) {
+  .startup-container{
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+  }
   .startup-header {
     padding-left: 0px;
     align-items: baseline;
   }
+  .description{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+  }
   .startup-body {
     padding: 0%;
-    grid-row: 5fr 1fr 1fr;
-    grid-column: 1fr;
+    grid-template-rows: 1fr 0.75fr 0.75fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "body body"
       "lbtn lbtn"
       "sbtn sbtn";
   }
   .description p {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0px;
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+@media (max-width: 720px){
+  .startup-body {
+    grid-template-rows: 1fr 0.5fr 0.5fr;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  .description p {
+    font-size: 14px;
+    margin: 0px;
   }
 }
