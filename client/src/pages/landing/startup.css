@@ -52,20 +52,24 @@ body {
 }
 
 .description {
-  padding: 20px;
   border-radius: 50px;
   grid-area: body;
   display: flex;
   justify-content: left;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .description p {
   font-family: "Mitr", sans-serif;
   color: #30475e;
   font-size: 18px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 10px 10px 10px 50px;
+}
+
+.description b {
+  font-size: 22px;
+  text-shadow: 1px 2px #f2a365;
 }
 
 .login-button {
@@ -129,15 +133,15 @@ body {
   color: #30475e;
 }
 
-@media (max-width: 1064px) {
-  .startup-container{
+@media (max-width: 1094px) {
+  .startup-container {
     grid-template-rows: 0.1fr 1fr 0.1fr;
   }
   .startup-header {
     padding-left: 0px;
     align-items: baseline;
   }
-  .description{
+  .description {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
@@ -152,17 +156,23 @@ body {
       "sbtn sbtn";
   }
   .description p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0px;
+  }
+  .description b {
+    font-size: 20px;
   }
 }
 
-@media (max-width: 720px){
+@media (max-width: 715px) {
   .startup-body {
     grid-template-rows: 1fr 0.5fr 0.5fr;
   }
   .description p {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0px;
+  }
+  .description b {
+    font-size: 18px;
   }
 }

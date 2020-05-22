@@ -39,7 +39,7 @@
 
 .google:hover {
   transform: translateY(-1px);
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .icon {
@@ -85,7 +85,7 @@
 
 .modalButton:hover {
   transform: translateY(-1px);
-  transform: scale(1.02);
+  transform: scale(1.04);
   background: #f73859;
   color: white;
 }
@@ -119,9 +119,10 @@ a {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   font-size: 14px;
   color: #f73859;
+  opacity: 0.8;
 }
 
 .inputs a {
@@ -140,4 +141,10 @@ a {
 
 .confirm {
   grid-area: "confirm";
+}
+
+.text-input:focus::-webkit-input-placeholder {
+  transition: text-indent 0.6s 0.6s ease;
+  text-indent: -100%;
+  opacity: 0.8;
 }
