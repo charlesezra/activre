@@ -21,8 +21,8 @@ export default function Landing() {
             • Study shows that the active recall studying technique will help
             you remember discrete facts and information with ease. <br />
             • This website is dedicated to giving everyone an easy way to
-            practice this technique. Try it out now! <br /> • Creating modules,
-            Study with Spaced Repetition, Success in your field!
+            practice this technique. Try it out now! <br /> • Create modules &
+            Study with Spaced Repetition leads to Success!
           </p>
         </div>
         <div className="login-button">

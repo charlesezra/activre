@@ -1,15 +1,11 @@
-import React from 'react';
-import './main.css';
-import Nav from '../../components/navbar/nav'
+import React from "react";
+import "./main.css";
+import Sidebar from "../../components/sidebar/sidebar";
 
-class Main extends React.Component{
-    render(){
-        return(
-            <div>
-                <section></section>
-            </div>          
-        );
-    }
-};
-
-export default Main;
+export default function Main() {
+  return (
+    <div className="main-container">
+      <Sidebar />
+    </div>
+  );
+}
