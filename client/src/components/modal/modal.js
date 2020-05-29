@@ -64,9 +64,9 @@ export default function Popup({ open, setOpen, sign, setSign }) {
             </div>
             <div className="inputs">
               <p>Email:</p>
-              <input className="text-input" placeholder="Enter Email..." type="text" />
+              <input type="email" name="email" className="text-input" placeholder="Enter Email..." />
               <p>Password:</p>
-              <input className="text-input" placeholder="Enter Password..." type="password" />
+              <input type="password" name="password" className="text-input" placeholder="Enter Password..." />
               <a href="/">Forgot Password</a>
             </div>
             <div className="confirm">

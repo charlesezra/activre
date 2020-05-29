@@ -1,7 +1,24 @@
-.main-container{
-    background: lightblue;
-    margin: -8px;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
+.main-container {
+  background: white;
+  margin: -16px auto;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  margin-left: 4rem;
+  transition: 400ms ease;
+}
+
+.content-menu {
+  margin-left: 14rem;
+  transition: 400ms ease;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .content {
+    margin: 0;
+  }
 }

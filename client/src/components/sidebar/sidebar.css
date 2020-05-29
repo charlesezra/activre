@@ -1,18 +1,151 @@
-
-.sidebar-container{
-    background: #30475e;
-    font-family: "Mitr", sans-serif;
+:root {
+  font-size: 16px;
+  font-family: "Mitr", sans-serif;
+  --text-primary: #30475e;
+  --text-secondary: #f9f7f7;
+  --bg-primary: #30475e;
+  --bg-secondary: #3a4750;
+  --transition-speed: 400ms;
 }
 
-.nav-item{
-    background: red;
+.sidebar-container {
+  color: black;
+  background-color: white;
 }
 
-.nav-text{
-    font-size: 20px;
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width var(--transition-speed) ease;
 }
 
-.icon{
-    font-size: 1.75em;
-    margin: 12px auto;
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border-right: 2px solid white;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  border-top: 1px solid var(--text-secondary);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  filter: grayscale(40%) opacity(0.9);
+  transition: var(--transition-speed);
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1) brightness(1.20);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.icon {
+  min-width: 2rem;
+  margin: 0 1rem;
+  color: #f2a365;
+}
+
+.logo {
+  background: var(--bg-secondary);
+  width: 100%;
+}
+
+.logo .link-text {
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  -webkit-text-stroke: 1px #f9f7f7;
+  text-shadow: 1px 2px #f2a365;
+  letter-spacing: 0.2ch;
+  font-weight: bold;
+  text-align: center;
+  transition: ease-in var(--transition-speed);
+}
+
+.logo button {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.logo .icon {
+  transform: rotate(0deg);
+  transition: transform var(--transition-speed);
+}
+
+.nav-item .link-text {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 4rem;
+    height: 100vh;
+  }
+
+  .navbar-active {
+    width: 14rem;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width var(--transition-speed) ease;
+    height: 100vh;
+  }
+
+  .navbar-active .logo .icon {
+    transform: rotate(-180deg);
+  }
+
+  .navbar-active .link-text {
+    display: inline;
+    transition: opacity var(--transition-speed) ease-in;
+    width: 100%;
+  }
 }
