@@ -1,4 +1,4 @@
-.main-container {
+.create-container {
   background: white;
   margin: 0;
   padding: 0;
@@ -16,11 +16,11 @@
   transition: 400ms ease;
 }
 
-.home-body {
+.create-body {
   margin-left: 25px;
 }
 
-.recent {
+.create-title {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
@@ -40,7 +40,7 @@
     margin: 0;
   }
 
-  .home-body{
+  .create-body {
     margin-left: 15px;
   }
 }

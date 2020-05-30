@@ -42,10 +42,10 @@
   transform: scale(1.04);
 }
 
-.icon {
+.google .icon {
   grid-area: icon;
   font-size: 30px;
-  padding: 8px 0px;
+  margin:  8px 16px;
   color: #4285fe;
 }
 

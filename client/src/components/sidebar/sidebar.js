@@ -36,9 +36,9 @@ export default function Sidebar({ open, setOpen }) {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a href="/create" className="nav-link">
               <FontAwesomeIcon icon={faPlus} className="icon" />
-              <span className="link-text">New</span>
+              <span className="link-text">Create</span>
             </a>
           </li>
           <li className="nav-item">
