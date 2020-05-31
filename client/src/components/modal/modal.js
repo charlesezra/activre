@@ -60,13 +60,25 @@ export default function Popup({ open, setOpen, sign, setSign }) {
             </div>
             <div className="google">
               <FontAwesomeIcon icon={faGoogle} className="icon" />
-              <button>Login with Google</button>
+              <a href="/auth/google">
+                <button onclick>Login with Google</button>
+              </a>
             </div>
             <div className="inputs">
               <p>Email:</p>
-              <input type="email" name="email" className="text-input" placeholder="Enter Email..." />
+              <input
+                type="email"
+                name="email"
+                className="text-input"
+                placeholder="Enter Email..."
+              />
               <p>Password:</p>
-              <input type="password" name="password" className="text-input" placeholder="Enter Password..." />
+              <input
+                type="password"
+                name="password"
+                className="text-input"
+                placeholder="Enter Password..."
+              />
               <a href="/">Forgot Password</a>
             </div>
             <div className="confirm">
@@ -90,17 +102,35 @@ export default function Popup({ open, setOpen, sign, setSign }) {
             </div>
             <div className="google">
               <FontAwesomeIcon icon={faGoogle} className="icon" />
-              <button>Sign up with Google</button>
+              <a href="/auth/google">
+                <button onclick>Sign Up with Google</button>
+              </a>
             </div>
             <div className="inputs">
               <p>Username:</p>
-              <input className="text-input" placeholder="Enter Username..." type="text" />
+              <input
+                className="text-input"
+                placeholder="Enter Username..."
+                type="text"
+              />
               <p>Email:</p>
-              <input className="text-input" placeholder="Enter Email..." type="text" />
+              <input
+                className="text-input"
+                placeholder="Enter Email..."
+                type="text"
+              />
               <p>Password:</p>
-              <input className="text-input" placeholder="Enter Password..." type="password" />
+              <input
+                className="text-input"
+                placeholder="Enter Password..."
+                type="password"
+              />
               <p>Confirm Password:</p>
-              <input className="text-input" placeholder="Confirm Password..." type="password" />
+              <input
+                className="text-input"
+                placeholder="Confirm Password..."
+                type="password"
+              />
             </div>
             <div className="confirm">
               <button className="modalButton">Confirm</button>

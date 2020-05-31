@@ -36,7 +36,7 @@ export default function Header() {
               <a href="#">Policy</a>
             </li>
             <li className="dropdown-item">
-              <a href="/">Log Out</a>
+              <a href="/api/logout">Log Out</a>
             </li>
           </ul>
         </div>
